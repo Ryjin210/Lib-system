@@ -1,38 +1,62 @@
-#allTheThings {
-    width: 90%;
-    max-width: 800px;
+.section-title {
     text-align: center;
-    margin: 8em auto;
-    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.allTheThings {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.7rem;
     color: #94aab0;
-    display: block;
-  }
-  
-  a{
-      color: #94aab0;
-      text-decoration: none;
-  }
-  
-  #member{
-      display: inline-block;
-  }
-  
-  #verticalLine {
-      display: inline-block;
-      margin-left: 20px;
-      border-left: solid #343642;
-  }
-  
-  #librarian-link{
-      margin-left: 20px;
-  }
-  
-  #member, #librarian
-  {
-      transition: all .2s ease-in-out;
-  }
-  
-  #member:hover, #librarian:hover
-  {
-      transform: scale(1.1);
-  }
+    display: flex;
+    justify-content: space-between; /* Add space between member and librarian on desktop */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.member,
+.librarian {
+    flex: 1; /* Equal width for member and librarian on desktop */
+    transition: all .2s ease-in-out;
+    margin: 1em; /* Add some margin for spacing */
+}
+
+.member-logo,
+.librarian-logo {
+    max-width: 100%; /* Ensure images don't overflow on smaller screens */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .allTheThings {
+        text-align: center;
+    }
+
+    .member,
+    .librarian {
+        flex: 1 0 100%; /* Full width on mobile */
+        margin: 0; /* Remove margin for spacing */
+    }
+
+    .librarian {
+        border-top: 1px solid #343642; /* Add a border between member and librarian */
+        padding-top: 1em; /* Add some padding to separate them */
+        padding-bottom: 3em;
+    }
+
+    .lib-text {
+        display: block; /* Display the text below the librarian image on mobile */
+    }
+
+    .member-logo{
+        margin: 0 auto; /* Center horizontally */
+        width: 120px; /* Adjust width for better mobile proportions */
+    }
+
+    .librarian-logo {
+        margin: 0 auto; /* Center horizontally */
+        width: 120px; /* Adjust width for better mobile proportions */
+    }
+}
