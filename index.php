@@ -152,54 +152,30 @@ $res = $stmt->get_result();
         </div>
         <div class="space-100"></div>
     </header>
-    
-    <section>
-        <div class="space-80"></div>
-        <div class="container"> <!--
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
-                    <h2>Book <strong>Categories</strong></h2>
-                    <div class="space-20"></div>
-                    <div class="title-bar blue">
-                        <ul class="list-inline list-unstyled">
-                            <li><i class="icofont icofont-square"></i></li>
-                            <li><i class="icofont icofont-square"></i></li>
-                        </ul>
-                    </div>
-                    <div class="space-30"></div>
-                    <p>Most popular book categories to get your learning started</p>
-                </div>
-            </div>
-            <div class="space-60"></div>
-            <div class="row text-center">
-            </div>
-            <div class="space-60"></div>
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <a href="books.php" class="btn btn-primary">See More</a>
-                </div>
-            </div>
-            <div class="space-80"></div> -->
 
-            <!--New Login and Librarian Login-->
-            <div id="allTheThings">
-			<div id="member">
-				<a href="lib_user/pages_std_index.php">
-					<img src="img/ic_membership.svg" width="250px" height="auto"/><br />
-					&nbsp;Member Login
-				</a>
-			</div>
-			<div id="verticalLine">
-				<div id="librarian">
-					<a id="librarian-link" href="sudo/pages_sudo_index.php">
-						<img src="img/ic_librarian2.svg" width="250px" height="220" /><br />
-						&nbsp;&nbsp;&nbsp;Librarian Login
-					</a>
-				</div>
-			</div>
-		</div>
+<section>
+    <div class="space-80"></div>
+    <div class="container"> 
+        <!-- New Login for Teachers / Students and Librarian -->
+        <h2 class="section-title">Login Options</h2>
+        <div class="allTheThings">
+            <div class="member">
+                <a href="lib_user/pages_std_index.php">
+                    <img class="member-logo" src="images/member-logo.png" alt="Member Login" />
+                    <br />
+                    Member Login
+                </a>
+            </div>
+            <div class="librarian">
+                <a class="librarian-link" href="sudo/pages_sudo_index.php">
+                    <img class="librarian-logo" src="images/librarian-logo.png" alt="Librarian Login" />
+                    <br />
+                    Librarian Login
+                </a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
     
     <!--Footer-->
     <?php require_once('partials/footer.php');?>
